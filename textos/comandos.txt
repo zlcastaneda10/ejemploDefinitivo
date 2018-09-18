@@ -1,5 +1,10 @@
 Guia de comandos utiles para el parcial
 
+Comandos de VS Code
+    Ctrl KS para guardar todos los archivos
+    CrtlK + CtrlF para indentar lo seleccionado
+    Ctrl} para "toggle" comentar una linea 
+
 Asegurarse de tener instalado lo necesario:
     npm install express- generator -g 
     npm install yarn -g (usar solo yarn para evitar problemas con el despliegue en heroku)
@@ -23,3 +28,6 @@ Para correr el repositorio:
 Mongo:
 Documentacion util
     http://mongodb.github.io/node-mongodb-native/3.1/quick-start/quick-start/
+
+Importar DB (Asegurarse de que efectivamente sea un JSON Array)
+    cd data/ mongoimport -d swipe -c objects --jsonArray --file swipe.json

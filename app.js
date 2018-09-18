@@ -18,7 +18,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//voy a pedirle a Node que me corra el react precompilado
+app.use(express.static(path.join(__dirname, 'cliente/build')));
 
 app.use('/', indexRouter);
 //No necesitamos users

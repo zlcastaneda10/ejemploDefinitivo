@@ -1,9 +1,12 @@
-Backend de node js su funcion es servir el react compilado y tener los data endpoints (entregar los datos en formato json)
+Backend de node js: su funcion es servir el react compilado y tener los data endpoints (entregar los datos en formato json)
 No modelo PHP no MVC como Ruby
 AJAX con endpoints asincronos
 pero usa react por lo que la Vista y en controlador corren juntos en el front
+Finalmente React tiene una arquitectura M VC :v 
 
-Le paso el compilador de react al front end para que reciba el codigo con el compilador genere lso cambios y todo en el navegador.
+Le paso el compilador de react al front end para que reciba el codigo y con el compilador genere los cambios y todo en el navegador.
 (jode el SEO de las app :v)
 
-
+Node js tiene 2 funciones
+    Servir los dataendpoints
+    Servir el react compilado

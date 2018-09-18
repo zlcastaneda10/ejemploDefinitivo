@@ -51,7 +51,7 @@ const findDocuments = function(db, callback) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //Ya no voy a renderizar el template del index
-  //res.render('index', { title: 'Express' });
+  // res.render('index', { title: 'Express' });
 });
 
 /**A partir de aqui voy a crear mis propios endpoints */
