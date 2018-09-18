@@ -1,0 +1,20 @@
+Guia de comandos utiles para el parcial
+
+Asegurarse de tener instalado lo necesario:
+    npm install express- generator -g 
+    npm install yarn -g (usar solo yarn para evitar problemas con el despliegue en heroku)
+
+Generar el backend:
+    express repoParcial
+    cd repoParcial
+    yarn install
+    yarn start (verificar que node corre correctamente en el puerto 3000)
+
+Generar el frontend:
+    npx create-react-app cliente
+    yarn install
+    yarn start
+
+Mongo:
+Documentacion util
+    http://mongodb.github.io/node-mongodb-native/3.1/quick-start/quick-start/
