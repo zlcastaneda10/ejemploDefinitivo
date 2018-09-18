@@ -8,12 +8,17 @@ Generar el backend:
     express repoParcial
     cd repoParcial
     yarn install
-    yarn start (verificar que node corre correctamente en el puerto 3000)
+    yarn start (verificar que node corre correctamente en el puerto 3000 luego cambiar a 3001)
 
 Generar el frontend:
     npx create-react-app cliente
     yarn install
     yarn start
+
+Para correr el repositorio: 
+    yarn start (en la caperta del back)
+    cd cliente
+    yarn start (en la carpeta del front)
 
 Mongo:
 Documentacion util
