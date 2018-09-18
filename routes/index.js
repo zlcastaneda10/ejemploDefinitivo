@@ -57,6 +57,8 @@ router.get('/', function(req, res, next) {
 /**A partir de aqui voy a crear mis propios endpoints */
 //getData ejemplo
 router.get('/getData', function(req, res) {
+  //Añadimos un header para indicar que lo que envio es de tipo json 
+  res.setHeader('Content-Type', 'application/json');
   getData((data)=>
     res.send(data)
   );
