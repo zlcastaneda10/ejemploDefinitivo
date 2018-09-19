@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 //mis imports
-import Objeto from './componentes/Objeto';
+import Formulario from './componentes/Formulario';
 
 
 class App extends Component {
@@ -13,8 +13,10 @@ class App extends Component {
       //Aqui indicamos lo que vamos a usar en el state
       //Antes de probar la conexion a la  base de datos usamos un objeto de prueba
       objetos: [
-        {  titulo:'holi', descripcion: 'wipiwi'}
+        {  titulo:'holi', descripccion: 'wipiwi'}
       ]
+
+
     };
   }
 
@@ -22,7 +24,7 @@ class App extends Component {
   componentDidMount(){
     //esto es una promesa 
     fetch('/getData')
-    //ver 1:00:47 para ver como se pasan opciones (no-cords)
+    //ver 1:00:47 para ver como se pasan opciones (no-cors)
     //Las promesas funcionan con then then then y voy filtrando las cosas que necesito
     //La promesa retorna un objeto con todo  el json
       .then((res)=>res.json() )
@@ -48,8 +50,10 @@ class App extends Component {
       <div className="App">
         <h1>Ejemplo React</h1>
         {/* Aqui puedo empezar a cargar mis componentes para construir mi APP :D */}
-
         {this.renderObjects()}
+        {/* Vamos a carfar por ejemplo un formulario */}
+        <Formulario/>
+      
       </div>
     );
   }
