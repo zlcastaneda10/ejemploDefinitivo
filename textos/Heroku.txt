@@ -11,3 +11,12 @@ Para las malezas :v
     "heroku-postbuild": "cd cliente && npm install && npm run build"
     //Esto le dice a heroku que vaya a la carpeta del front instale dependencias y haga el build de react
   }
+
+Variables de entorno
+
+crear un archivo .env
+MONGODB_URI='mongodb://localhost:27017'
+DB_NAME='swipe'
+
+ese archivo debe estar ignorado de git !important
+las variables deben configurarse en heroku en settings/config vars
