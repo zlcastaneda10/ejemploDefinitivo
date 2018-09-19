@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 //mis imports
-import Objeto from './Objeto.js';
+import Objeto from './componentes/Objeto';
 
 
 class App extends Component {
