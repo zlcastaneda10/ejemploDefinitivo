@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
+require('dotenv').config();
 
 //Codigo copiado de la documentacion de mongo, sirve para conectarse a mongo #GraciasFaryd
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGODB_URI;
 
 // Database Name MODIFICAR
-const dbName = 'swipe';
+const dbName = process.env.DB_NAME;
 // Collection Name MODIFICAR
 const collectionName = 'objects';
 

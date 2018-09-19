@@ -1,0 +1,13 @@
+Para las malezas :v
+
+"engines": {
+    "node": "8.11.4",
+    "npm": "^6.4.1"
+  }
+  // Esto fuerza la version de node y npm que va a usar heroku para no tener problemas de versiones con librerias e.g.(bcrypt)
+
+"scripts": {
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd cliente && npm install && npm run build"
+    //Esto le dice a heroku que vaya a la carpeta del front instale dependencias y haga el build de react
+  }
