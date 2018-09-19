@@ -10,3 +10,7 @@ Le paso el compilador de react al front end para que reciba el codigo y con el c
 Node js tiene 2 funciones
     Servir los dataendpoints
     Servir el react compilado
+
+React es M VC el state de react tiene la ultima palabra sobre el estado de los componentes de la pagina (unica fuente de verdad) y maneja la vista y el controlador con eso 
+Desde el punto de vista del desarrollador actualiza todo (Pregunta teorica)
+El motor de diferencias es el que decide realmente que es lo que vamos a modificar
