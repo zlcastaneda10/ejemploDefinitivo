@@ -9,13 +9,13 @@ export default class Papaparser extends Component {
     super(props);
     // definimos el state de ESTE componente (cada componente tiene un state independiente)
     this.state ={
-      data: {values:[{Fecha:'2018/05/21', Temperatura:100},{Fecha:'2018/05/22', Temperatura:99}]},
+      data: {values:[{date:'2018/05/21', temp:100},{date:'2018/05/22', temp:99}]},
       spec:{
         'description': 'A simple bar chart with embedded data.',
         'mark': 'bar',
         'encoding': {
-          'y': {'field': 'Fecha', 'type': 'ordinal'},
-          'x': {'field': 'Temperatura', 'type': 'quantitative'}
+          'y': {'field': 'date', 'type': 'ordinal'},
+          'x': {'field': 'temp', 'type': 'quantitative'}
         }
       }
     };
@@ -33,8 +33,8 @@ export default class Papaparser extends Component {
         'description': 'Still a simple barchar but different',
         'mark': 'point',
         'encoding': {
-          'x': {'field': 'Fecha', 'type': 'ordinal'},
-          'y': {'field': 'Temperatura', 'type': 'quantitative'}
+          'x': {'field': 'date', 'type': 'ordinal'},
+          'y': {'field': 'temp', 'type': 'quantitative'}
         }
       }
     });
@@ -63,7 +63,7 @@ export default class Papaparser extends Component {
   }
 
   componentDidMount() {
-    //this.parser();
+    this.parser();
     console.log(this.state.data);
     console.log(this.state.spec);
     
@@ -81,8 +81,7 @@ export default class Papaparser extends Component {
             rows='20'
             name='spec'
             ref={(div)=>this.divTarget=div}
-            value={JSON.stringify(this.state.spec)}
-            
+            value={JSON.stringify(this.state.spec)}           
           >
           </textarea>
           <button onSubmit={this.handleSubmit}>Cambiar Spec</button>
