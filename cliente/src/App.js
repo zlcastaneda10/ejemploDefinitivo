@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 //mis imports
 import Formulario from './componentes/Formulario';
+import Papaparser from './componentes/Papaparser';
 
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
       //version componente
       //<Objeto key={obj.descripcion} objeto={obj}/>
       //version div
-      <div key={obj.descripcion}>{obj.titulo}-{obj.descripccion} </div>
+      <div key={obj.titulo}>{obj.titulo}-{obj.descripccion} </div>
     );
   }
   
@@ -51,9 +52,10 @@ class App extends Component {
         <h1>Ejemplo React</h1>
         {/* Aqui puedo empezar a cargar mis componentes para construir mi APP :D */}
         {this.renderObjects()}
-        {/* Vamos a carfar por ejemplo un formulario */}
+        {/* Vamos a cargar por ejemplo un formulario */}
         <Formulario/>
-      
+        <Papaparser/>
+        
       </div>
     );
   }

@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "papaparse": "^4.6.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "react-vega": "^4.0.2",
+    "react-vega-lite": "^2.0.2",
+    "vega-embed": "^3.20.0",
+    "vega-lib": "^4.2.0",
+    "vega-lite": "^3.0.0-rc6"
   },
   "scripts": {
     "start": "react-scripts start",

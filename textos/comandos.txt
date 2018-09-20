@@ -37,3 +37,11 @@ Importar DB (Asegurarse de que efectivamente sea un JSON Array)
 React:  
     Documentacion
     https://reactjs.org/docs/hello-world.html
+
+Vega:
+    Repo leidy https://github.com/zlcastaneda10/ColombianElectionsViewer/blob/master/src/App.js
+    Ejemplo John: https://bl.ocks.org/john-guerra/a198b46e398b7619f6bcd84368c0dac7
+    Vega embeb:https://beta.observablehq.com/@domoritz/hello-vega-embed
+    Simple barChart: https://vega.github.io/vega-lite/examples/bar.html
+    PapaParse: https://www.papaparse.com/docs
+    Vega react: https://github.com/kristw/react-vega-lite
