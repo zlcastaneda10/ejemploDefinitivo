@@ -7,6 +7,7 @@ import FormSpec from './componentes/Formspec';
 import Formspec from './componentes/Formspec';
 
 import Vis from './componentes/Vis';
+import Lista from './componentes/Lista';
 
 
 class App extends Component {
@@ -60,7 +61,7 @@ class App extends Component {
         {/* <Formulario/> */}
         
         {/* <Papaparser/> */}
-        <Vis/>
+        <Lista/>
         
         {/* <Formspec/>  */}
       </div>

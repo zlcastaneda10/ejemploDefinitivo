@@ -150,7 +150,7 @@ export default class vis extends Component {
           <input type="submit" value="Guardar visualizacion" />
         </form>
         
-        <Lista/>
+       
         
       </div>
     );

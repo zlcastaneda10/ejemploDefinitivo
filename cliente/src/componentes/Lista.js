@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Elemento from './Elemento';
+import Vis from './Vis';
 
 export default class lista extends Component {
   constructor(props){
@@ -7,11 +9,15 @@ export default class lista extends Component {
       visualizaciones:[
         {
           titulo : 'Visualizacion 1',
-          autor : 'Zulma Castañeda'
+          autor : 'Zulma Castañeda',
+          spec: '',
+          myData: ''
         },
         {
           titulo: 'Visualizacion 2',
-          autor: 'Orlando Sabogal'
+          autor: 'Orlando Sabogal',
+          spec: '',
+          myData: ''
         }
       ]   
     };
@@ -31,33 +37,18 @@ export default class lista extends Component {
       <div>
         <ul>            
           {this.state.visualizaciones.map((vis)=>
-            <li key={vis.titulo}>
-              <h3>{vis.titulo} </h3>
-                Autor: {vis.autor}
-              <button>Cargar visualizacion</button>
-              <form onSubmit={this.handleSubmit}>
-                <label>
-                  {/* usamos name para identificar los campos del form y ahorrarnos algunos event handlers */}
-                  Nombre
-                  <input name='nombre' type='text' value={this.state.nombre} onChange={this.handleChange}/>
-                </label>
-      
-                <br/>
-      
-                <label>
-                  Apellido
-                  <input name='apellido' type='text' value={this.state.apellido} onChange={this.handleChange}/>
-                </label>
-      
-                <br/>
-      
-                <input type="submit" value="Enviar" />
-      
-              </form>
-            </li>
+            <Elemento 
+              key={vis.titulo}
+              titulo={vis.titulo}
+              autor = {vis.autor}
+              spec = {vis.spec}
+              myData = {vis.myData}
+            />
+            
           )}
 
         </ul>
+        <Vis/>
       </div>
     );
   }
