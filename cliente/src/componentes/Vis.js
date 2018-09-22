@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import vegaEmbed from 'vega-embed';
 import Papa from 'papaparse';
+import Lista from './Lista';
 
 export default class vis extends Component {
   constructor(props){
     super(props);
     this.state={
+      titulo: '',
+      autor: '',
       file:null,
       spec:{
-        '$schema': 'https://vega.github.io/schema/vega-lite/v3.0.0-rc6.json',
+        'schema': 'https://vega.github.io/schema/vega-lite/v3.0.0-rc6.json',
         'description': 'A simple bar chart with embedded data.',
         'data': {
           'name': 'myData' 
@@ -29,6 +32,7 @@ export default class vis extends Component {
     this.onChangeFile=this.onChangeFile.bind(this);
     this.papaParser=this.papaParser.bind(this);
     this.saveVis=this.saveVis.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   //Me permite modificar el state de spec cuando se hacen cambios en el textarea
@@ -78,11 +82,11 @@ export default class vis extends Component {
     });
 
   }
-
+//guardamos la visualizacion en mongo
   saveVis(event){
     const mistate = JSON.stringify(this.state);
     console.log(mistate);
-    fetch('/posData',{
+    fetch('/postVis',{
       method: 'POST',
       headers: { 'Content-Type' : 'application/json' },
       body: mistate
@@ -98,6 +102,17 @@ export default class vis extends Component {
       });
       
     event.preventDefault();
+  }
+//puedo escribir en el form
+  handleInputChange(event) {
+    const value = event.target.value;
+    this.setState({
+      [event.target.name]: value
+    });
+  }
+
+  refreshList(){
+    this.setState
   }
 
   render() {
@@ -126,14 +141,16 @@ export default class vis extends Component {
         <form onSubmit={this.saveVis}>
           <label>
             Titulo visualizacion
-            <input name='titulo' type='text' value={this.state.nombre} />
+            <input name='titulo' type='text' value={this.state.titulo} onChange={this.handleInputChange}/>
           </label>
           <label>
             Autor 
-            <input name='autor' type='text' value={this.state.nombre} />
+            <input name='autor' type='text' value={this.state.autor} onChange={this.handleInputChange}/>
           </label>
           <input type="submit" value="Guardar visualizacion" />
         </form>
+        
+        <Lista/>
         
       </div>
     );

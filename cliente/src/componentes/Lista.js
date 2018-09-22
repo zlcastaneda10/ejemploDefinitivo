@@ -35,6 +35,25 @@ export default class lista extends Component {
               <h3>{vis.titulo} </h3>
                 Autor: {vis.autor}
               <button>Cargar visualizacion</button>
+              <form onSubmit={this.handleSubmit}>
+                <label>
+                  {/* usamos name para identificar los campos del form y ahorrarnos algunos event handlers */}
+                  Nombre
+                  <input name='nombre' type='text' value={this.state.nombre} onChange={this.handleChange}/>
+                </label>
+      
+                <br/>
+      
+                <label>
+                  Apellido
+                  <input name='apellido' type='text' value={this.state.apellido} onChange={this.handleChange}/>
+                </label>
+      
+                <br/>
+      
+                <input type="submit" value="Enviar" />
+      
+              </form>
             </li>
           )}
 

@@ -34,7 +34,7 @@ function getData(callback){
 //insercion de documentos
 const insertDocuments = function(db,data, callback) {
   // Get the documents collection
-  let collectionName = 'test';
+  let collectionName = 'vis';
   const collection = db.collection(collectionName);
   // Insert some documents
   collection.insertOne(data, function(err, result) {
@@ -89,13 +89,13 @@ router.post('/nada', function(req, res) {
 });
 
 
-router.post('/posData', function(req, res) {
+router.post('/postVis', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   const { body } = req;
   const {
-    //id,
-    nombre,
-    apellido
+    file,
+    spec,
+    myData
   } = body;
   MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
