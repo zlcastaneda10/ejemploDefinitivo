@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 //mis imports
-import Formulario from './componentes/Formulario';
-import Papaparser from './componentes/Papaparser';
-import FormSpec from './componentes/Formspec';
-import Formspec from './componentes/Formspec';
-
-import Vis from './componentes/Vis';
+//import Vis from './componentes/Vis';
 import Lista from './componentes/Lista';
 
 
@@ -54,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Parcial 1 Web: Vega-lite-lite</h1>
+        <header><h1>Parcial 1 Web: Vega-lite-lite</h1></header>
         {/* Aqui puedo empezar a cargar mis componentes para construir mi APP :D */}
         {/* {this.renderObjects()} */}
         {/* Vamos a cargar por ejemplo un formulario */}

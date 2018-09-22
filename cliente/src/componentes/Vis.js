@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import vegaEmbed from 'vega-embed';
 import Papa from 'papaparse';
-import Lista from './Lista';
+//import Lista from './Lista';
 
 export default class vis extends Component {
   constructor(props){
@@ -82,7 +82,7 @@ export default class vis extends Component {
     });
 
   }
-//guardamos la visualizacion en mongo
+  //guardamos la visualizacion en mongo
   saveVis(event){
     const mistate = JSON.stringify(this.state);
     console.log(mistate);
@@ -101,9 +101,9 @@ export default class vis extends Component {
         }
       });
       
-    event.preventDefault();
+  
   }
-//puedo escribir en el form
+  //puedo escribir en el form
   handleInputChange(event) {
     const value = event.target.value;
     this.setState({
@@ -111,9 +111,7 @@ export default class vis extends Component {
     });
   }
 
-  refreshList(){
-    this.setState
-  }
+  
 
   render() {
     return (
@@ -121,7 +119,7 @@ export default class vis extends Component {
         <div ref={(div) => this.div = div}>   </div>
        
         <div>
-          
+          {JSON.stringify(this.state.spec).includes('$') ? <div>El spec no puede incluir el simbolo $ (escribe spec en lugar de $spec)</div> : ''}
           <textarea
             cols='40'
             rows='20'
@@ -131,11 +129,12 @@ export default class vis extends Component {
             onChange={this.handleChange}           
           >
           </textarea>
-          <button onClick={this.handleSubmit}>Cambiar Spec</button>
+          <br></br>
+          <button className='btn btn-primary' onClick={this.handleSubmit}>Cambiar Spec</button>
         </div>
         
         
-        <h1>File upload</h1>
+        <h3>Subir CSV </h3>
         <input type='file' onChange={this.onChangeFile}/>
 
         <form onSubmit={this.saveVis}>
@@ -147,7 +146,7 @@ export default class vis extends Component {
             Autor 
             <input name='autor' type='text' value={this.state.autor} onChange={this.handleInputChange}/>
           </label>
-          <input type="submit" value="Guardar visualizacion" />
+          <input className='btn btn-primary' type="submit" value="Guardar visualizacion" />
         </form>
         
        

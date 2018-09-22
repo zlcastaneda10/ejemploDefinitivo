@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Papa from 'papaparse';
 import VegaLite from 'react-vega-lite';
 
-
+//Clase de ejemplo para realizar pruebas con papaparser
 
 export default class Papaparser extends Component {
   constructor(props) {

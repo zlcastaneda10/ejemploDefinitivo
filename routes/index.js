@@ -80,15 +80,7 @@ router.get('/getData', function(req, res) {
   );
 });
 
-//postData ejemplo
-router.post('/nada', function(req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  insertDocuments((data)=>
-  res.send(data)
-  );
-});
-
-
+//guardar visualizaciones
 router.post('/postVis', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   const { body } = req;
