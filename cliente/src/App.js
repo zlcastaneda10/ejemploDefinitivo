@@ -3,8 +3,10 @@ import './App.css';
 //mis imports
 import Formulario from './componentes/Formulario';
 import Papaparser from './componentes/Papaparser';
-import FormSpec from './componentes/Formspec'
+import FormSpec from './componentes/Formspec';
 import Formspec from './componentes/Formspec';
+import Lista from './componentes/Lista';
+import Vis from './componentes/Vis';
 
 
 class App extends Component {
@@ -57,7 +59,9 @@ class App extends Component {
         {/* Vamos a cargar por ejemplo un formulario */}
         {/* <Formulario/> */}
         
-        <Papaparser/>
+        {/* <Papaparser/> */}
+        <Vis/>
+        <Lista/>
         {/* <Formspec/>  */}
       </div>
     );

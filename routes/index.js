@@ -49,7 +49,7 @@ const insertDocuments = function(db,data, callback) {
 //Funcion para encontrar todos los documentos de la DB
 const findDocuments = function(db, callback) {
   // Collection Name MODIFICAR
-  let collectionName = 'objects';
+  let collectionName = 'vis';
   // Get the documents collection
   const collection = db.collection(collectionName);
   // Find some documents
@@ -102,8 +102,8 @@ router.post('/posData', function(req, res) {
     console.log("Connected successfully to server");
     
     const db = client.db(dbName);
-    insertDocuments(db,body,(data)=>
-    res.send(data)
+    insertDocuments(db,body,()=>
+    res.send({"success":true})
     );
   });
 });

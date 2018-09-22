@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Papa from 'papaparse';
 import VegaLite from 'react-vega-lite';
+import VegaEmbed from 'vega-embed';
+
 
 
 export default class Papaparser extends Component {
@@ -63,7 +65,7 @@ export default class Papaparser extends Component {
   }
 
   componentDidMount() {
-    this.parser();
+    //this.parser();
     console.log(this.state.data);
     console.log(this.state.spec);
     
