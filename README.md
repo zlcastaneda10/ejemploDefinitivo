@@ -1,7 +1,7 @@
 # Parcial 1 desarrollo web: Vega-lite-lite
 
 # Descripccion
-Esta version minimalista de Vega lite le permite realizar visualizaciones con vega embed ingresando a la aplicacion un archivo csv y un spec adecuado para el mismo. El demo se puede encontrar aqui.
+Esta version minimalista de Vega lite le permite realizar visualizaciones con vega embed ingresando a la aplicacion un archivo csv y un spec adecuado para el mismo. El demo se puede encontrar aqui. https://tutorialcompletado.herokuapp.com/
 
 # Deployment
 Para este repositorio recomiendo el uso del manejador de paquetes yarn. Para tener una copia local corriendo en tu maquina debes abrir la carpeta del proyecto y usar el comando:
